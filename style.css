@@ -1,0 +1,141 @@
+/* Reset */
+*{
+  padding:0px;
+  margin:0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+body, h1{
+  font-family: 'Gideon Roman', cursive;
+  background-color: rgb(24, 24, 23);
+  color:#fff
+}
+
+/* Possicionamento Grid*/
+.grid-layout-principal{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1f;
+  height: 100vh;
+  width: auto;
+}
+
+header, .nav_container_item{
+  padding: 10px;
+}
+
+.header{
+  display: flex;
+  padding-left: 15px;
+  justify-content: space-between;
+}
+
+.nav_container_item{
+  display: flex;
+  padding-left: 10px;
+  color:#fff
+}
+.nav_container_item a{
+  color:#fff;
+  border: solid 1px #000000;
+  border-radius: 40px;
+  transition: transform 2s;
+  
+}
+
+.grid-layout-apresentacao{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px; 
+  color:#fff;
+  width: 90%;
+  max-width: 980px;
+}
+
+.apresentacao{
+  font-size: 16px;
+  font-weight: 100%;
+  text-align: justify;
+  text-align-last: right;
+  font-family: 'Nunito', sans-serif;
+  padding-left: 50px;
+  margin: 20px;
+  animation-name: example;
+  animation-duration: 1s;
+
+}
+  /* The animation code */
+  @keyframes example {
+    from {opacity: 0; transform:translate(0, -50px)}
+    to {opacity: 100; transform:translate(0, 0);}
+  }
+
+.img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+/* The element to apply the animation to */
+  animation-name: example;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  
+}
+ .sobre, .skills, .formacao{
+   padding: 42px;
+   animation: example 1s;
+   animation-duration: 0.5s;
+ }
+
+ #coruja{
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+ }
+
+.grid-layout-habilidade{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.footer_container{
+  width: 100%;
+  color:#fff;
+  padding: 20px 0;
+}
+
+.footer_item ul, li, a{
+  text-decoration: none;
+}
+
+.footer_item ul, li, a{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.Right{
+  text-align: center;
+  
+}
+
+/* media queries */
+@media(max-width: 768px) {
+  .grid-layout-habilidade{
+    font-size: 50%;
+  }
+}
+
+@media(max-width: 630px){
+.grid-layout-principal{
+  font-size: 100%;
+}
+}
+
+
+
